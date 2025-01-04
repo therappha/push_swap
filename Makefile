@@ -4,14 +4,14 @@ NAME= push_swap
 CC= cc
 
 
-CFLAGS= -Wall -Wextra -Werror
+CFLAGS= -g -Wall -Wextra -Werror
 INCLUDES= ./includes
 LIBFT_DIR= ./libft
 FT_PRINTF_DIR= ./ft_printf
 LIBFT= $(LIBFT_DIR)/libft.a
 FT_PRINTF= $(PRINTF_DIR)/libftprintf.a
 SRCS_DIR= ./srcs
-SRCS= $(SRCS_DIR)/push_swap.c
+SRCS= $(SRCS_DIR)/push_swap.c $(SRCS_DIR)/input_handler.c $(SRCS_DIR)/stack_init.c $(SRCS_DIR)/stack_sorted.c
 
 OBJS=$(SRCS:.c=.o)
 
