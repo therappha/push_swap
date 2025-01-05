@@ -6,12 +6,13 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:57:50 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/04 19:31:51 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/05 19:39:45 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+int	check_dup(int *num_array, int i);
 int	checknum(char *str);
 int	*atoi_array(int i, char **array);
 
@@ -33,9 +34,12 @@ int *make_array(int ac, char **av)
 		while (char_array[i] != NULL)
 			i++;
 		num_array = atoi_array(i, char_array);
-		if (num_array)
-			for(int j = 0; j < i; j++)
-				ft_printf("%d\n", num_array[j]);
+		if (check_dup(num_array, i))
+		{	if (ac == 2)
+				return (free(num_array), free(char_array), ft_printf("Error!"), NULL);
+			else
+				return (free(num_array), ft_printf("Error!"), NULL);
+		}
 	}
 	return (num_array);
 }
@@ -56,7 +60,6 @@ int	*atoi_array(int i, char **array)
 				return(free(n_array), ft_printf("Error!"), NULL);
 			}
 			j++;
-
 		}
 	return (n_array);
 }
@@ -74,4 +77,25 @@ int	checknum(char *str)
 		i++;
 	}
 	return (1);
+}
+int	check_dup(int *num_array, int i)
+{
+	int	j;
+	int	k;
+
+	if (!num_array)
+		return (0);
+	j = 0;
+	while (j < i)
+	{
+		k = 0;
+		while(k < i)
+		{
+			if (num_array[j] == num_array[k] && j != k)
+				return (1);
+			k++;
+		}
+		j++;
+	}
+	return (0);
 }
