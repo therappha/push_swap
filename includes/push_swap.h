@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/06 18:21:11 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/06 18:22:45 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,7 @@ void	sb(t_stack **stack_b);
 void	ss(t_stack **stack_a, t_stack **stack_b);
 void	ra(t_stack **stack_a);
 void	rb(t_stack **stack_b);
-
+void	rra(t_stack **stack_a);
+void	rrb(t_stack **stack_b);
+void	rrr(t_stack **stack_a, t_stack **stack_b);
 #endif
