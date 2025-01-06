@@ -1,47 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/05 18:27:13 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/06 18:18:50 by rafaelfe         ###   ########.fr       */
+/*   Created: 2025/01/06 17:27:58 by rafaelfe          #+#    #+#             */
+/*   Updated: 2025/01/06 18:19:26 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void swap(t_stack **stack)
+void	rotate(t_stack **stack)
 {
 	t_stack *head;
-	t_stack *temp;
 
-	if (!*stack || !stack)
-		return ;
 	head = *stack;
-	if (!(head -> next))
-		return ;
-	temp = head -> next;
-	head -> next = temp -> next;
-	temp -> next = head;
-	*stack = temp;
+	*stack = (*stack) -> next;
+	ft_stack_addback(stack, head);
+	head -> next = NULL;
 }
-
-void	sa(t_stack **stack_a)
+void	ra(t_stack **stack_a)
 {
-	swap(stack_a);
-	ft_printf("sa\n");
+	rotate(stack_a);
+	ft_printf("ra\n");
 }
-void	sb(t_stack **stack_b)
+void	rb(t_stack **stack_b)
 {
-	swap(stack_b);
-	ft_printf("sb\n");
+	rotate(stack_b);
+	ft_printf("rb\n");
 }
-
-void ss(t_stack **stack_a, t_stack **stack_b)
+void	rr(t_stack **stack_a, t_stack **stack_b)
 {
-	swap(stack_a);
-	swap(stack_b);
-	ft_printf("ss\n");
+	rotate(stack_a);
+	rotate(stack_b);
+	ft_printf("rr\n");
 }

@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:13:11 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/05 20:05:29 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/06 17:47:17 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,28 +39,4 @@ t_stack *new_node(int data)
 	node -> num = data;
 	node -> next = NULL;
 	return (node);
-}
-
-void	ft_stack_addback(t_stack **lst, t_stack *new)
-{
-	t_stack	*temp;
-
-	if (!new)
-		return ;
-	if (!*lst)
-	{
-		*lst = new;
-		return ;
-	}
-	temp = ft_stacklast(*lst);
-	temp -> next = new;
-}
-
-t_stack	*ft_stacklast(t_stack *lst)
-{
-	if (!lst)
-		return (NULL);
-	while (lst -> next)
-		lst = lst -> next;
-	return (lst);
 }

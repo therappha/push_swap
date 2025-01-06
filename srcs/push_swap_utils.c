@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:36:27 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/05 21:01:30 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/06 17:48:22 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,34 @@ void print_stacks(t_stack **stack)
 	}
 }
 
+void	ft_stack_addback(t_stack **lst, t_stack *new)
+{
+	t_stack	*temp;
+
+	if (!new)
+		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	temp = ft_stacklast(*lst);
+	temp -> next = new;
+}
+
+t_stack	*ft_stacklast(t_stack *lst)
+{
+	if (!lst)
+		return (NULL);
+	while (lst -> next)
+		lst = lst -> next;
+	return (lst);
+}
+
+void	ft_stackadd_front(t_stack **lst, t_stack *new)
+{
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	*lst = new;
+}

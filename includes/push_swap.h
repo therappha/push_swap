@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/05 20:58:00 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/06 18:21:11 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include "../libft/libft.h"
 #include "../ft_printf/ft_printf.h"
 #include <limits.h>
-#include <stdbool.h>
 #include <stdlib.h>
 
 typedef struct s_stack
@@ -28,18 +27,24 @@ typedef struct s_stack
 } t_stack;
 
 //debug
-void print_stacks(t_stack **stack);
-void swap(t_stack **stack);
+void	print_stacks(t_stack **stack);
+void	rotate(t_stack **stack);
+void	rev_rotate(t_stack **stack);
 
 //utils
 int		*make_array(int ac, char **av);
 void	stack_init(t_stack **stack_a, int *num_array, int stack_size);
 int		stack_sorted(t_stack **stack);
 int		ft_countwords(const char *s, char c);
+t_stack	*ft_stacklast(t_stack *lst);
+void	ft_stack_addback(t_stack **lst, t_stack *new);
+void	ft_stackadd_front(t_stack **lst, t_stack *new);
 
 //operations
-void	sa(t_stack **stack_a, int print);
-void	sb(t_stack **stack_b, int print);
-void ss(t_stack **stack_a, t_stack **stack_b, int print);
+void	sa(t_stack **stack_a);
+void	sb(t_stack **stack_b);
+void	ss(t_stack **stack_a, t_stack **stack_b);
+void	ra(t_stack **stack_a);
+void	rb(t_stack **stack_b);
 
 #endif
