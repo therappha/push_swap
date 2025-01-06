@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/06 18:22:45 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/06 19:34:31 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		ft_countwords(const char *s, char c);
 t_stack	*ft_stacklast(t_stack *lst);
 void	ft_stack_addback(t_stack **lst, t_stack *new);
 void	ft_stackadd_front(t_stack **lst, t_stack *new);
+void	sort_three(t_stack **stack_a);
 
 //operations
 void	sa(t_stack **stack_a);
@@ -49,4 +50,7 @@ void	rb(t_stack **stack_b);
 void	rra(t_stack **stack_a);
 void	rrb(t_stack **stack_b);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
+void	pa(t_stack **stack_a, t_stack **stack_b);
+void	pb(t_stack **stack_a, t_stack **stack_b);
+
 #endif

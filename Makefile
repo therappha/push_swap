@@ -12,8 +12,8 @@ LIBFT= $(LIBFT_DIR)/libft.a
 FT_PRINTF= $(PRINTF_DIR)/libftprintf.a
 SRCS_DIR= ./srcs
 SRCS= $(SRCS_DIR)/push_swap.c $(SRCS_DIR)/input_handler.c $(SRCS_DIR)/push_swap_utils.c $(SRCS_DIR)/stack_init.c \
-$(SRCS_DIR)/stack_sorted.c  $(SRCS_DIR)/op/swap.c $(SRCS_DIR)/op/rotate.c $(SRCS_DIR)/op/rev_rotate.c
-
+$(SRCS_DIR)/stack_sorted.c  $(SRCS_DIR)/op/swap.c $(SRCS_DIR)/op/rotate.c $(SRCS_DIR)/op/rev_rotate.c \
+$(SRCS_DIR)/op/push.c $(SRCS_DIR)/sort_three.c
 OBJS=$(SRCS:.c=.o)
 
 
