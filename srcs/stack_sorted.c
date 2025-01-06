@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:24:26 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/05 18:20:16 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/06 22:22:28 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,5 @@ int	stack_sorted(t_stack **stack)
 	}
 	return (1);
 }
+
+
