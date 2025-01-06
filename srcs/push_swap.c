@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 14:23:04 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/06 19:36:04 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/06 19:55:20 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main(int ac, char **av)
 				ft_printf("\nsort(&stack_a, &stack_b)\n");
 		}
 	}
-	//free_stacks(&stack_a, &stack_b) and num array!!!;
+	free_stacks(&stack_a, &stack_b);
 	return (0);
  }
 

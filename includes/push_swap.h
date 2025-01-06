@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/06 19:34:31 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/06 19:55:43 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ typedef struct s_stack
 
 //debug
 void	print_stacks(t_stack **stack);
-void	rotate(t_stack **stack);
-void	rev_rotate(t_stack **stack);
 
 //utils
 int		*make_array(int ac, char **av);
@@ -40,6 +38,7 @@ t_stack	*ft_stacklast(t_stack *lst);
 void	ft_stack_addback(t_stack **lst, t_stack *new);
 void	ft_stackadd_front(t_stack **lst, t_stack *new);
 void	sort_three(t_stack **stack_a);
+void	free_stacks(t_stack **stack_a, t_stack **stack_b);
 
 //operations
 void	sa(t_stack **stack_a);
