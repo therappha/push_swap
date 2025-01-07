@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 14:23:04 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/06 19:55:20 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 13:04:13 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@ int main(int ac, char **av)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	int		*num_array;
+	long		*num_array;
 
 	stack_a = NULL;
 	stack_b = NULL;
-	num_array = make_array(ac, av);
+	num_array = NULL;
+	if (ac >= 2)
+		num_array = make_array(ac, av);
 	if (ac == 2)
 		ac = ft_countwords(av[1], ' ') + 1;
 	if (num_array)
@@ -33,8 +35,8 @@ int main(int ac, char **av)
 			else
 				ft_printf("\nsort(&stack_a, &stack_b)\n");
 		}
+		free_stacks(&stack_a, &stack_b);
 	}
-	free_stacks(&stack_a, &stack_b);
 	return (0);
  }
 

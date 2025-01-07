@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/06 19:55:43 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 13:13:49 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ typedef struct s_stack
 } t_stack;
 
 //debug
-void	print_stacks(t_stack **stack);
+void print_stacks(t_stack **stack_a, t_stack **stack_b);
 
 //utils
-int		*make_array(int ac, char **av);
-void	stack_init(t_stack **stack_a, int *num_array, int stack_size);
+long	*make_array(int ac, char **av);
+void	stack_init(t_stack **stack_a, long *num_array, int stack_size);
 int		stack_sorted(t_stack **stack);
 int		ft_countwords(const char *s, char c);
 t_stack	*ft_stacklast(t_stack *lst);
@@ -39,6 +39,8 @@ void	ft_stack_addback(t_stack **lst, t_stack *new);
 void	ft_stackadd_front(t_stack **lst, t_stack *new);
 void	sort_three(t_stack **stack_a);
 void	free_stacks(t_stack **stack_a, t_stack **stack_b);
+int		stacklen(t_stack **stack);
+void	*freesplit(char **array, int i);
 
 //operations
 void	sa(t_stack **stack_a);

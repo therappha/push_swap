@@ -1,43 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack_sorted.c                                     :+:      :+:    :+:   */
+/*   debug.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/04 20:24:26 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 12:06:22 by rafaelfe         ###   ########.fr       */
+/*   Created: 2025/01/07 13:11:53 by rafaelfe          #+#    #+#             */
+/*   Updated: 2025/01/07 13:12:08 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	stack_sorted(t_stack **stack)
+void print_stacks(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *head;
+	t_stack	*sa;
+	t_stack	*sb;
 
-	head = *stack;
-	while (head -> next)
-	{
-		if ((head -> num) > (head -> next -> num))
-			return (0);
-		head = head -> next;
+	sa = *stack_a;
+	sb = *stack_b;
+	ft_printf("\n|----------\n");
+	while (sa || sb)
+		{
+			if (sa)
+			{
+				ft_printf("| %d	", sa -> num);
+				sa = sa -> next;
+			}
+			else
+				ft_printf("|   ");
+			if (sb)
+			{
+				ft_printf("%d", sb -> num);
+				sb = sb -> next;
+
+			}
+			ft_printf("\n");
+
+		}
+		ft_printf("| -	-\n| a	b\n|----------\n");
 	}
-	return (1);
-}
-
-int	stacklen(t_stack **stack)
-{
-	t_stack *head;
-	int	size;
-
-	head = *stack;
-	size = 0;
-	while(head)
-	{
-		size++;
-		head = head -> next;
-	}
-	return (size);
-}
-

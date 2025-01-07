@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 17:44:44 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/06 18:18:10 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 12:37:05 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	rev_rotate(t_stack **stack)
 	t_stack *before_last;
 
 	head = *stack;
+	if (!head || !head -> next)
+		return ;
 	before_last = *stack;
 	while (before_last -> next -> next)
 		before_last = before_last-> next;
