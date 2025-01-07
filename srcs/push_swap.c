@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 14:23:04 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 14:06:00 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 15:21:34 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int ac, char **av)
 			if (ac - 1 <= 3)
 				sort_three(&stack_a);
 			else
-				ft_printf("\nsort(&stack_a, &stack_b)\n");
+				sort(&stack_a, &stack_b);
 		}
 		free_stacks(&stack_a, &stack_b);
 	}

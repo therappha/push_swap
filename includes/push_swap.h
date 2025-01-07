@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 14:05:04 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 15:55:18 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_stack
 	int				num;
 	struct s_stack	*next;
 	int				cost;
-	int				index;
+	int				above_median;
 }	t_stack;
 
 //debug
@@ -41,6 +41,7 @@ void	sort_three(t_stack **stack_a);
 void	free_stacks(t_stack **stack_a, t_stack **stack_b);
 int		stacklen(t_stack **stack);
 void	*freesplit(char **array, int i);
+void	sort(t_stack **stack_a, t_stack **stack_b);
 
 //operations
 void	sa(t_stack **stack_a);
