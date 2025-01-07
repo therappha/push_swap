@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:13:11 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 15:55:13 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 18:39:31 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ t_stack	*new_node(int data)
 		return (NULL);
 	node -> num = data;
 	node -> next = NULL;
+	node -> target = NULL;
 	return (node);
 }
 

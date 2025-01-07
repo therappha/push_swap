@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 13:11:53 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 14:02:18 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 18:47:35 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	print_stacks(t_stack **stack_a, t_stack **stack_b)
 	{
 		if (sa)
 		{
-			ft_printf("| %d	", sa -> num);
+			if(sa -> target)
+				ft_printf("| %d	", sa -> target -> num);
 			sa = sa -> next;
 		}
 		else
