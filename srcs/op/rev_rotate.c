@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 17:44:44 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 12:37:05 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:00:18 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	rev_rotate(t_stack **stack)
 {
 	t_stack	*head;
 	t_stack	*temp;
-	t_stack *before_last;
+	t_stack	*before_last;
 
 	head = *stack;
 	if (!head || !head -> next)
@@ -26,7 +26,7 @@ void	rev_rotate(t_stack **stack)
 		before_last = before_last-> next;
 	temp = ft_stacklast(*stack);
 	ft_stackadd_front(stack, temp);
-	if ((*stack) -> next -> next)
+	if ((*stack)-> next -> next)
 		before_last -> next = NULL;
 	temp -> next = head;
 	*stack = temp;
@@ -35,7 +35,6 @@ void	rev_rotate(t_stack **stack)
 void	rra(t_stack **stack_a)
 {
 	rev_rotate(stack_a);
-
 	ft_printf("rra\n");
 }
 
@@ -45,10 +44,9 @@ void	rrb(t_stack **stack_b)
 	ft_printf("rrb\n");
 }
 
-void rrr(t_stack **stack_a, t_stack **stack_b)
+void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
 	rev_rotate(stack_a);
 	rev_rotate(stack_b);
 	ft_printf("rrr\n");
-
 }

@@ -6,16 +6,16 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 18:27:13 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/06 18:18:50 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:01:30 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void swap(t_stack **stack)
+void	swap(t_stack **stack)
 {
-	t_stack *head;
-	t_stack *temp;
+	t_stack	*head;
+	t_stack	*temp;
 
 	if (!*stack || !stack)
 		return ;
@@ -33,13 +33,14 @@ void	sa(t_stack **stack_a)
 	swap(stack_a);
 	ft_printf("sa\n");
 }
+
 void	sb(t_stack **stack_b)
 {
 	swap(stack_b);
 	ft_printf("sb\n");
 }
 
-void ss(t_stack **stack_a, t_stack **stack_b)
+void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);

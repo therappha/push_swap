@@ -6,16 +6,16 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 14:23:04 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 13:04:13 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:06:00 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	t_stack		*stack_a;
+	t_stack		*stack_b;
 	long		*num_array;
 
 	stack_a = NULL;
@@ -38,5 +38,4 @@ int main(int ac, char **av)
 		free_stacks(&stack_a, &stack_b);
 	}
 	return (0);
- }
-
+}

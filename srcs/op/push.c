@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 18:56:50 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/06 19:16:57 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 13:59:30 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	push(t_stack **origin, t_stack **dest)
 {
-	t_stack *head;
+	t_stack	*head;
+
 	if (!origin || !*origin)
 		return ;
 	head = *origin;
-	(*origin) = (*origin) -> next;
+	(*origin) = (*origin)-> next;
 	ft_stackadd_front(dest, head);
 }
+
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {
 	push(stack_b, stack_a);

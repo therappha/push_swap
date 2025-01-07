@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:57:50 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 13:16:14 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:08:35 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,11 @@ long	ft_atol(const char *str);
 long	*make_array(int ac, char **av)
 {
 	char	**char_array;
-	long		*num_array;
+	long	*num_array;
 	int		i;
 
 	num_array = NULL;
 	i = 0;
-
 	if (ac == 2)
 		char_array = ft_split(av[1], ' ');
 	else
@@ -37,7 +36,8 @@ long	*make_array(int ac, char **av)
 	if (check_dup(num_array, i))
 	{
 		if (ac == 2)
-			return (free(num_array), freesplit(char_array, i), ft_printf("Error"), NULL);
+			return (free(num_array), freesplit(char_array, i),
+				ft_printf("Error"), NULL);
 		else
 			return (free(num_array), ft_printf("Error"), NULL);
 	}
@@ -49,26 +49,25 @@ long	*make_array(int ac, char **av)
 long	*atol_array(int i, char **array)
 {
 	long	*n_array;
-	int	j;
+	int		j;
 
 	j = 0;
 	n_array = (long *)malloc(i * sizeof(long));
-		while(j < i)
-		{
-			if (checknum(array[j]))
-				n_array[j] = ft_atol(array[j]);
-			else
-			{
-				return(free(n_array), ft_printf("Error!"), NULL);
-			}
-			j++;
-		}
+	while (j < i)
+	{
+		if (checknum(array[j]))
+			n_array[j] = ft_atol(array[j]);
+		else
+			return (free(n_array), ft_printf("Error!"), NULL);
+		j++;
+	}
 	return (n_array);
 }
 
 int	checknum(char *str)
 {
 	int	i;
+
 	i = 0;
 	while (str[i])
 	{
@@ -80,6 +79,7 @@ int	checknum(char *str)
 	}
 	return (1);
 }
+
 int	check_dup(long *num_array, int i)
 {
 	int	j;
@@ -92,7 +92,7 @@ int	check_dup(long *num_array, int i)
 	{
 		k = 0;
 		if (!(num_array[j] < INT_MAX && num_array[j] > INT_MIN))
-				return (1);
+			return (1);
 		while (k < i)
 		{
 			if (num_array[j] == num_array[k] && j != k)
@@ -106,7 +106,7 @@ int	check_dup(long *num_array, int i)
 
 long	ft_atol(const char *str)
 {
-	long		minus;
+	long	minus;
 	long	result;
 
 	minus = 1;

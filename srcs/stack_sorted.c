@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:24:26 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 12:06:22 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:02:59 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	stack_sorted(t_stack **stack)
 {
-	t_stack *head;
+	t_stack	*head;
 
 	head = *stack;
 	while (head -> next)
@@ -28,16 +28,15 @@ int	stack_sorted(t_stack **stack)
 
 int	stacklen(t_stack **stack)
 {
-	t_stack *head;
-	int	size;
+	t_stack	*head;
+	int		size;
 
 	head = *stack;
 	size = 0;
-	while(head)
+	while (head)
 	{
 		size++;
 		head = head -> next;
 	}
 	return (size);
 }
-

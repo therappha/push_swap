@@ -6,28 +6,28 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 13:13:49 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:05:04 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include "../libft/libft.h"
-#include "../ft_printf/ft_printf.h"
-#include <limits.h>
-#include <stdlib.h>
+# include "../libft/libft.h"
+# include "../ft_printf/ft_printf.h"
+# include <limits.h>
+# include <stdlib.h>
 
 typedef struct s_stack
 {
-	int	num;
-	struct s_stack *next;
-	int	cost;
-	int	index;
-} t_stack;
+	int				num;
+	struct s_stack	*next;
+	int				cost;
+	int				index;
+}	t_stack;
 
 //debug
-void print_stacks(t_stack **stack_a, t_stack **stack_b);
+void	print_stacks(t_stack **stack_a, t_stack **stack_b);
 
 //utils
 long	*make_array(int ac, char **av);

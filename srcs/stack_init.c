@@ -6,20 +6,21 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:13:11 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 13:04:53 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/07 14:03:59 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_stack *new_node(int data);
+t_stack	*new_node(int data);
 void	ft_stack_addback(t_stack **lst, t_stack *new);
 t_stack	*ft_stacklast(t_stack *lst);
 
 void	stack_init(t_stack **stack_a, long *num_array, int stack_size)
 {
-	t_stack *node;
+	t_stack	*node;
 	int		i;
+
 	i = 0;
 	while (i < stack_size)
 	{
@@ -30,7 +31,7 @@ void	stack_init(t_stack **stack_a, long *num_array, int stack_size)
 	free(num_array);
 }
 
-t_stack *new_node(int data)
+t_stack	*new_node(int data)
 {
 	t_stack	*node;
 
@@ -53,9 +54,9 @@ void	stack_clear(t_stack **stack)
 		*stack = temp;
 	}
 }
+
 void	free_stacks(t_stack **stack_a, t_stack **stack_b)
 {
-
 	if (*stack_a && stack_a)
 		stack_clear(stack_a);
 	if (*stack_b && stack_b)
