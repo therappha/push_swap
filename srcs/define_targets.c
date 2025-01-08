@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:09:26 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 18:55:02 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/08 20:41:04 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,7 @@ void	define_target_pa(t_stack **stack_a, t_stack **stack_b)
 	}
 	set_target_pa(stack_a, stack_b, &min);
 }
+
 t_stack	*find_cheapest(t_stack **stack)
 {
 	t_stack	*head;

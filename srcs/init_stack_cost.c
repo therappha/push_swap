@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:28:45 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 19:43:18 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/08 20:39:55 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void	reset_index(t_stack **stack_a, t_stack **stack_b)
 		head_a -> index = i++;
 		head_a -> target = NULL;
 		head_a = head_a -> next;
-
 	}
 	i = 0;
 	while (head_b)

@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 18:37:46 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/08 20:41:20 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ void	define_target_pa(t_stack **stack_a, t_stack **stack_b);
 t_stack	*find_cheapest(t_stack **stack);
 void	push_a_to_b(t_stack **stack_a, t_stack **stack_b);
 void	push_b_to_a(t_stack **stack_a, t_stack **stack_b);
-
 
 //operations
 void	sa(t_stack **stack_a);

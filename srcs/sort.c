@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:17:28 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 20:21:41 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/08 20:40:28 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ void	sort(t_stack **stack_a, t_stack **stack_b)
 
 void	push_min(t_stack **stack_a)
 {
-	t_stack *head_a;
-	t_stack *min;
+	t_stack	*head_a;
+	t_stack	*min;
 
 	head_a = *stack_a;
 	while (head_a)
