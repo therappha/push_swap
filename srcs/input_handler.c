@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:57:50 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 14:08:35 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/08 21:25:35 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ long	*make_array(int ac, char **av)
 	{
 		if (ac == 2)
 			return (free(num_array), freesplit(char_array, i),
-				ft_printf("Error"), NULL);
+				ft_printf("Error\n"), NULL);
 		else
-			return (free(num_array), ft_printf("Error"), NULL);
+			return (free(num_array), ft_printf("Error\n"), NULL);
 	}
 	if (ac == 2)
 		freesplit(char_array, i);
@@ -58,7 +58,7 @@ long	*atol_array(int i, char **array)
 		if (checknum(array[j]))
 			n_array[j] = ft_atol(array[j]);
 		else
-			return (free(n_array), ft_printf("Error!"), NULL);
+			return (free(n_array), ft_printf("Error\n"), NULL);
 		j++;
 	}
 	return (n_array);
@@ -73,7 +73,7 @@ int	checknum(char *str)
 	{
 		if ((str[i] == '-' || str[i] == '+') && i == 0)
 			i++;
-		if (!ft_isdigit(str[i]) && str[i] != '\0')
+		if (!ft_isdigit(str[i]) || str[i] == '\0')
 			return (0);
 		i++;
 	}
@@ -91,7 +91,7 @@ int	check_dup(long *num_array, int i)
 	while (j < i)
 	{
 		k = 0;
-		if (!(num_array[j] < INT_MAX && num_array[j] > INT_MIN))
+		if (!(num_array[j] <= INT_MAX && num_array[j] >= INT_MIN))
 			return (1);
 		while (k < i)
 		{
