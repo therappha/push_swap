@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 18:38:37 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/08 17:50:03 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_stack
 	struct s_stack	*target;
 	int				cost;
 	int				index;
+	int				cheapest;
 }	t_stack;
 
 //debug
@@ -43,9 +44,12 @@ void	free_stacks(t_stack **stack_a, t_stack **stack_b);
 int		stacklen(t_stack **stack);
 void	*freesplit(char **array, int i);
 void	sort(t_stack **stack_a, t_stack **stack_b);
-void 	init_stack_index(t_stack **stack_a, t_stack **stack_b);
+void	init_stack_index(t_stack **stack_a, t_stack **stack_b);
 void	init_stack_cost(t_stack **stack);
 void	define_target_pb(t_stack **stack_a, t_stack **stack_b);
+void	define_target_pa(t_stack **stack_a, t_stack **stack_b);
+void	find_cheapest(t_stack **stack);
+
 
 //operations
 void	sa(t_stack **stack_a);
