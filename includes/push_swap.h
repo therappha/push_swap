@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 17:50:03 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/08 18:37:46 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_stack
 	int				cost;
 	int				index;
 	int				cheapest;
+	int				above_median;
 }	t_stack;
 
 //debug
@@ -48,7 +49,9 @@ void	init_stack_index(t_stack **stack_a, t_stack **stack_b);
 void	init_stack_cost(t_stack **stack);
 void	define_target_pb(t_stack **stack_a, t_stack **stack_b);
 void	define_target_pa(t_stack **stack_a, t_stack **stack_b);
-void	find_cheapest(t_stack **stack);
+t_stack	*find_cheapest(t_stack **stack);
+void	push_a_to_b(t_stack **stack_a, t_stack **stack_b);
+void	push_b_to_a(t_stack **stack_a, t_stack **stack_b);
 
 
 //operations
@@ -57,6 +60,7 @@ void	sb(t_stack **stack_b);
 void	ss(t_stack **stack_a, t_stack **stack_b);
 void	ra(t_stack **stack_a);
 void	rb(t_stack **stack_b);
+void	rr(t_stack **stack_a, t_stack **stack_b);
 void	rra(t_stack **stack_a);
 void	rrb(t_stack **stack_b);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
