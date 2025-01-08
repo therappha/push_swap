@@ -6,11 +6,13 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:17:28 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 19:51:29 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/08 20:21:41 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+void	push_min(t_stack **stack_a);
 
 void	sort(t_stack **stack_a, t_stack **stack_b)
 {
@@ -19,10 +21,30 @@ void	sort(t_stack **stack_a, t_stack **stack_b)
 	push_a_to_b(stack_a, stack_b);
 	sort_three(stack_a);
 	push_b_to_a(stack_a, stack_b);
-	print_stacks(stack_a, stack_b);
-	
+	if (!stack_sorted(stack_a))
+		push_min(stack_a);
 }
 
-// if index of the two ;nodes are the same and are above mediam = rrr
-// if index of the two nodes are the same and are below median = rr
+void	push_min(t_stack **stack_a)
+{
+	t_stack *head_a;
+	t_stack *min;
 
+	head_a = *stack_a;
+	while (head_a)
+	{
+		if (!min || head_a -> num < min -> num)
+			min = head_a;
+		head_a = head_a -> next;
+	}
+	if (min -> above_median)
+	{
+		while ((*stack_a) != min)
+			rra(stack_a);
+	}
+	else
+	{
+		while ((*stack_a) != min)
+			rra(stack_a);
+	}
+}
