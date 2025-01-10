@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:57:50 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 21:25:35 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/10 21:06:29 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,6 @@ long	*make_array(int ac, char **av)
 	while (char_array[i] != NULL)
 		i++;
 	num_array = atol_array(i, char_array);
-	if (check_dup(num_array, i))
-	{
-		if (ac == 2)
-			return (free(num_array), freesplit(char_array, i),
-				ft_printf("Error\n"), NULL);
-		else
-			return (free(num_array), ft_printf("Error\n"), NULL);
-	}
 	if (ac == 2)
 		freesplit(char_array, i);
 	return (num_array);
@@ -55,8 +47,10 @@ long	*atol_array(int i, char **array)
 	n_array = (long *)malloc(i * sizeof(long));
 	while (j < i)
 	{
-		if (checknum(array[j]))
+		if (checknum(array[j]) && !check_dup(n_array, j))
+		{
 			n_array[j] = ft_atol(array[j]);
+		}
 		else
 			return (free(n_array), ft_printf("Error\n"), NULL);
 		j++;

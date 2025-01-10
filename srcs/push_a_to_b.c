@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:52:21 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 20:44:21 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/10 21:00:51 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	push_a_to_b(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*cheapest;
 
-	while (stacklen(stack_a) > 3)
+	while ((*stack_a)-> next -> next -> next)
 	{
 		define_target_pb(stack_a, stack_b);
 		cheapest = find_cheapest(stack_a);
