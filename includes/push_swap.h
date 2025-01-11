@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/11 17:20:04 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/11 18:08:51 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,15 @@ void	push_a_to_b(t_stack **stack_a, t_stack **stack_b);
 void	push_b_to_a(t_stack **stack_a, t_stack **stack_b);
 
 //operations
-void	sa(t_stack **stack_a);
-void	sb(t_stack **stack_b);
-void	ss(t_stack **stack_a, t_stack **stack_b);
-void	ra(t_stack **stack_a);
-void	rb(t_stack **stack_b);
-void	rr(t_stack **stack_a, t_stack **stack_b);
-void	rra(t_stack **stack_a);
-void	rrb(t_stack **stack_b);
-void	rrr(t_stack **stack_a, t_stack **stack_b);
-void	pa(t_stack **stack_a, t_stack **stack_b);
-void	pb(t_stack **stack_a, t_stack **stack_b);
-
+void	sa(t_stack **stack_a, int print);
+void	sb(t_stack **stack_b, int print);
+void	ss(t_stack **stack_a, t_stack **stack_b, int print);
+void	ra(t_stack **stack_a, int print);
+void	rb(t_stack **stack_b, int print);
+void	rr(t_stack **stack_a, t_stack **stack_b, int print);
+void	rra(t_stack **stack_a, int print);
+void	rrb(t_stack **stack_b, int print);
+void	rrr(t_stack **stack_a, t_stack **stack_b, int print);
+void	pa(t_stack **stack_a, t_stack **stack_b, int print);
+void	pb(t_stack **stack_a, t_stack **stack_b, int print);
 #endif

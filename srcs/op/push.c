@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 18:56:50 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 21:08:06 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/11 18:04:53 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@ int	push(t_stack **origin, t_stack **dest)
 	return (1);
 }
 
-void	pa(t_stack **stack_a, t_stack **stack_b)
+void	pa(t_stack **stack_a, t_stack **stack_b, int print)
 {
-	if (push(stack_b, stack_a))
+	push(stack_b, stack_a);
+	if (print)
 		ft_printf("pa\n");
-	init_stack_index(stack_a, stack_b);
 }
 
-void	pb(t_stack **stack_a, t_stack **stack_b)
+void	pb(t_stack **stack_a, t_stack **stack_b, int print)
 {
-	if (push(stack_a, stack_b))
+	push(stack_a, stack_b);
+	if (print)
 		ft_printf("pb\n");
-	init_stack_index(stack_a, stack_b);
 }

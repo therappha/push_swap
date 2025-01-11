@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 17:27:58 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 14:00:56 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/11 18:05:36 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,21 +24,24 @@ void	rotate(t_stack **stack)
 	head -> next = NULL;
 }
 
-void	ra(t_stack **stack_a)
+void	ra(t_stack **stack_a, int print)
 {
 	rotate(stack_a);
-	ft_printf("ra\n");
+	if (print)
+		ft_printf("ra\n");
 }
 
-void	rb(t_stack **stack_b)
+void	rb(t_stack **stack_b, int print)
 {
 	rotate(stack_b);
-	ft_printf("rb\n");
+	if (print)
+		ft_printf("rb\n");
 }
 
-void	rr(t_stack **stack_a, t_stack **stack_b)
+void	rr(t_stack **stack_a, t_stack **stack_b, int print)
 {
 	rotate(stack_a);
 	rotate(stack_b);
-	ft_printf("rr\n");
+	if (print)
+		ft_printf("rr\n");
 }

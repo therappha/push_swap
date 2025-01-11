@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:17:28 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/11 15:56:44 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/11 18:07:26 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	push_min(t_stack **stack_a);
 void	sort(t_stack **stack_a, t_stack **stack_b)
 {
 	while (stacklen(stack_a) > 3 && stacklen(stack_b) < 2)
-		pb(stack_a, stack_b);
+		pb(stack_a, stack_b, 1);
 	push_a_to_b(stack_a, stack_b);
 	sort_three(stack_a);
 	push_b_to_a(stack_a, stack_b);
@@ -40,11 +40,11 @@ void	push_min(t_stack **stack_a)
 	if (min -> above_median)
 	{
 		while ((*stack_a) != min)
-			rra(stack_a);
+			rra(stack_a, 1);
 	}
 	else
 	{
 		while ((*stack_a) != min)
-			ra(stack_a);
+			ra(stack_a, 1);
 	}
 }

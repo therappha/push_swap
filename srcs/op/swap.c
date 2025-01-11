@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 18:27:13 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 15:05:46 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/11 18:06:23 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,24 @@ void	swap(t_stack **stack)
 	*stack = temp;
 }
 
-void	sa(t_stack **stack_a)
+void	sa(t_stack **stack_a, int print)
 {
 	swap(stack_a);
-	ft_printf("sa\n");
+	if (print)
+		ft_printf("sa\n");
 }
 
-void	sb(t_stack **stack_b)
+void	sb(t_stack **stack_b, int print)
 {
 	swap(stack_b);
-	ft_printf("sb\n");
+	if (print)
+		ft_printf("sb\n");
 }
 
-void	ss(t_stack **stack_a, t_stack **stack_b)
+void	ss(t_stack **stack_a, t_stack **stack_b, int print)
 {
 	swap(stack_a);
 	swap(stack_b);
-	ft_printf("ss\n");
+	if (print)
+		ft_printf("ss\n");
 }
