@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:57:50 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/10 21:06:29 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/11 15:49:16 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,8 @@ long	*atol_array(int i, char **array)
 	n_array = (long *)malloc(i * sizeof(long));
 	while (j < i)
 	{
-		if (checknum(array[j]) && !check_dup(n_array, j))
-		{
-			n_array[j] = ft_atol(array[j]);
-		}
-		else
+		n_array[j] = ft_atol(array[j]);
+		if (!checknum(array[j]) || !check_dup(n_array, j))
 			return (free(n_array), ft_printf("Error\n"), NULL);
 		j++;
 	}
@@ -74,28 +71,26 @@ int	checknum(char *str)
 	return (1);
 }
 
-int	check_dup(long *num_array, int i)
+int	check_dup(long *num_array, int j)
 {
-	int	j;
+	int	i;
 	int	k;
 
-	if (!num_array)
-		return (0);
-	j = 0;
-	while (j < i)
+	i = 0;
+	while (i <= j)
 	{
 		k = 0;
-		if (!(num_array[j] <= INT_MAX && num_array[j] >= INT_MIN))
-			return (1);
-		while (k < i)
+		if (!(num_array[i] <= INT_MAX && num_array[i] >= INT_MIN))
+			return (0);
+		while (k < j)
 		{
-			if (num_array[j] == num_array[k] && j != k)
-				return (1);
+			if (num_array[i] == num_array[k] && i != k)
+				return (0);
 			k++;
 		}
-		j++;
+		i++;
 	}
-	return (0);
+	return (1);
 }
 
 long	ft_atol(const char *str)

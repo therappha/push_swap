@@ -6,15 +6,14 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 20:41:20 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/11 17:17:00 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../libft/libft.h"
-# include "../ft_printf/ft_printf.h"
+# include "../libft/includes/libft.h"
 # include <limits.h>
 # include <stdlib.h>
 

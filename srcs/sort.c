@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:17:28 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 20:40:28 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/11 15:56:44 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ void	push_min(t_stack **stack_a)
 	else
 	{
 		while ((*stack_a) != min)
-			rra(stack_a);
+			ra(stack_a);
 	}
 }
