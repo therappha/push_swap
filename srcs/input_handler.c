@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:57:50 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/11 15:49:16 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/11 19:00:39 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	check_dup(long *num_array, int j)
 		k = 0;
 		if (!(num_array[i] <= INT_MAX && num_array[i] >= INT_MIN))
 			return (0);
-		while (k < j)
+		while (k <= j)
 		{
 			if (num_array[i] == num_array[k] && i != k)
 				return (0);
