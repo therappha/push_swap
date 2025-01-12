@@ -29,7 +29,8 @@ void	push_min(t_stack **stack_a)
 {
 	t_stack	*head_a;
 	t_stack	*min;
-
+	
+	min = NULL;
 	head_a = *stack_a;
 	while (head_a)
 	{

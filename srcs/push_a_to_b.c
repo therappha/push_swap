@@ -13,7 +13,6 @@
 #include "../includes/push_swap.h"
 
 void	rotate_r_pb(t_stack **stack_a, t_stack **stack_b, t_stack *cheapest);
-
 void	push_a_to_b(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*cheapest;
@@ -38,7 +37,6 @@ void	push_a_to_b(t_stack **stack_a, t_stack **stack_b)
 				rb(stack_b, 1);
 		}
 		pb(stack_a, stack_b, 1);
-		init_stack_index(stack_a, stack_b);
 	}
 }
 

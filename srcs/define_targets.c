@@ -58,12 +58,10 @@ static void	set_target_pa(t_stack **stack_a, t_stack **stack_b, t_stack **min)
 
 void	define_target_pb(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack		*head_a;
 	t_stack		*head_b;
 	t_stack		*max;
 
 	max = NULL;
-	head_a = *stack_a;
 	head_b = *stack_b;
 	while (head_b)
 	{
@@ -77,12 +75,10 @@ void	define_target_pb(t_stack **stack_a, t_stack **stack_b)
 void	define_target_pa(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack		*head_a;
-	t_stack		*head_b;
 	t_stack		*min;
 
 	min = NULL;
 	head_a = *stack_a;
-	head_b = *stack_b;
 	while (head_a)
 	{
 		if (!min || head_a -> num < min -> num)
@@ -97,6 +93,7 @@ t_stack	*find_cheapest(t_stack **stack)
 	t_stack	*head;
 	t_stack	*cheapest;
 
+	cheapest = NULL;
 	head = *stack;
 	while (head)
 	{

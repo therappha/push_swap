@@ -38,7 +38,6 @@ void	push_b_to_a(t_stack **stack_a, t_stack **stack_b)
 				ra(stack_a, 1);
 		}
 		pa(stack_a, stack_b, 1);
-		init_stack_index(stack_a, stack_b);
 	}
 }
 

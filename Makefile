@@ -17,7 +17,7 @@ $(SRCS_DIR)/define_targets.c $(SRCS_DIR)/push_a_to_b.c $(SRCS_DIR)/push_b_to_a.c
 
 BONUS_SRCS= ./bonus/checker.c $(SRCS_DIR)/input_handler.c $(SRCS_DIR)/push_swap_utils.c $(SRCS_DIR)/stack_init.c \
 $(SRCS_DIR)/stack_sorted.c  $(SRCS_DIR)/op/swap.c $(SRCS_DIR)/op/rotate.c $(SRCS_DIR)/op/rev_rotate.c \
-$(SRCS_DIR)/op/push.c $(SRCS_DIR)/debug.c
+$(SRCS_DIR)/op/push.c $(SRCS_DIR)/debug.c $(SRCS_DIR)/init_stack_cost.c
 
 OBJS=$(SRCS:.c=.o)
 BONUS_OBJS=$(BONUS_SRCS:.c=.o)

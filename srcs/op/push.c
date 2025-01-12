@@ -27,6 +27,7 @@ int	push(t_stack **origin, t_stack **dest)
 void	pa(t_stack **stack_a, t_stack **stack_b, int print)
 {
 	push(stack_b, stack_a);
+	init_stack_index(stack_a, stack_b);
 	if (print)
 		ft_printf("pa\n");
 }
@@ -34,6 +35,7 @@ void	pa(t_stack **stack_a, t_stack **stack_b, int print)
 void	pb(t_stack **stack_a, t_stack **stack_b, int print)
 {
 	push(stack_a, stack_b);
+	init_stack_index(stack_a, stack_b);
 	if (print)
 		ft_printf("pb\n");
 }
