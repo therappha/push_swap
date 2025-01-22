@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:17:28 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/11 18:07:26 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/22 13:06:47 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	push_min(t_stack **stack_a)
 {
 	t_stack	*head_a;
 	t_stack	*min;
-	
+
 	min = NULL;
 	head_a = *stack_a;
 	while (head_a)

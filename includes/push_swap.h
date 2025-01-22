@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/22 12:34:30 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/22 13:10:39 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ long	*make_array(int ac, char **av);
 int		return_max_n(int num1, int num2);
 void	stack_init(t_stack **stack_a, long *num_array, int stack_size);
 int		stack_sorted(t_stack **stack);
-int		ft_countwords(const char *s, char c);
 t_stack	*ft_stacklast(t_stack *lst);
 void	ft_stack_addback(t_stack **lst, t_stack *new);
 void	ft_stackadd_front(t_stack **lst, t_stack *new);

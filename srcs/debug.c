@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 13:11:53 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/22 11:45:10 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/22 13:07:21 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	print_stacks(t_stack **stack_a, t_stack **stack_b)
 		ft_printf("stack_a: ");
 		while (sa)
 		{
-
 			ft_printf("%d ", sa -> num);
 			sa = sa -> next;
 		}

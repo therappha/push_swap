@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 16:57:50 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/11 19:00:39 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/22 13:20:15 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,13 @@ long	*make_array(int ac, char **av)
 	num_array = NULL;
 	i = 0;
 	if (ac == 2)
+	{
+		while (av[1][i] == 32 && av[1][i])
+			i++;
+		if (!av[1][i])
+			return (NULL);
 		char_array = ft_split(av[1], ' ');
+	}
 	else
 		char_array = av + 1;
 	i = 0;

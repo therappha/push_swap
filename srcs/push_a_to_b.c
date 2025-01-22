@@ -6,13 +6,14 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:52:21 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/11 18:10:03 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/22 13:07:03 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
 void	rotate_r_pb(t_stack **stack_a, t_stack **stack_b, t_stack *cheapest);
+
 void	push_a_to_b(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*cheapest;
