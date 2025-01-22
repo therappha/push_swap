@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/22 11:52:38 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/22 12:34:30 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 	struct s_stack	*target;
 	int				cost;
+	int				push_cost;
 	int				index;
 	int				above_median;
 }	t_stack;
