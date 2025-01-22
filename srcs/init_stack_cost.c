@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:28:45 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/08 20:39:55 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/22 11:44:10 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ void	reset_index(t_stack **stack_a, t_stack **stack_b)
 	while (head_a)
 	{
 		head_a -> above_median = 0;
-		head_a -> cheapest = 0;
 		head_a -> index = i++;
 		head_a -> target = NULL;
 		head_a = head_a -> next;
@@ -70,7 +69,6 @@ void	reset_index(t_stack **stack_a, t_stack **stack_b)
 	while (head_b)
 	{
 		head_b -> above_median = 0;
-		head_b -> cheapest = 0;
 		head_b -> index = i++;
 		head_b -> target = NULL;
 		head_b = head_b -> next;

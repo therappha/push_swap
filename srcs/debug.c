@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 13:11:53 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/11 15:57:16 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/22 11:45:10 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,13 @@ void	print_stacks(t_stack **stack_a, t_stack **stack_b)
 		ft_printf("stack_a: ");
 		while (sa)
 		{
-			if (sa -> cheapest)
-				ft_printf("*");
+
 			ft_printf("%d ", sa -> num);
 			sa = sa -> next;
 		}
 		ft_printf("\nstack_b: ");
 		while (sb)
 		{
-			if (sb -> cheapest)
-				ft_printf("*");
 			ft_printf("%d ", sb -> num);
 			sb = sb -> next;
 		}

@@ -6,35 +6,18 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 20:36:27 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/07 13:14:02 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/22 12:01:22 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	ft_countwords(const char *s, char c)
+int	return_max_n(int num1, int num2)
 {
-	int	i;
-	int	words;
-
-	words = 0;
-	i = 0;
-	while (s[i] == c)
-		i++;
-	if (s[i] == '\0')
-		return (0);
-	while (s[i])
-	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != '\0' && s[i] != c)
-		{
-			words++;
-			while (s[i] != c && s[i] != '\0')
-				i++;
-		}
-	}
-	return (words);
+	if (num1 > num2)
+		return (num1);
+	else
+		return (num2);
 }
 
 void	ft_stack_addback(t_stack **lst, t_stack *new)

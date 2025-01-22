@@ -6,7 +6,7 @@
 /*   By: rafaelfe <rafaelfe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 15:29:17 by rafaelfe          #+#    #+#             */
-/*   Updated: 2025/01/11 18:08:51 by rafaelfe         ###   ########.fr       */
+/*   Updated: 2025/01/22 11:52:38 by rafaelfe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ typedef struct s_stack
 	struct s_stack	*target;
 	int				cost;
 	int				index;
-	int				cheapest;
 	int				above_median;
 }	t_stack;
 
@@ -33,6 +32,7 @@ void	print_stacks(t_stack **stack_a, t_stack **stack_b);
 
 //utils
 long	*make_array(int ac, char **av);
+int		return_max_n(int num1, int num2);
 void	stack_init(t_stack **stack_a, long *num_array, int stack_size);
 int		stack_sorted(t_stack **stack);
 int		ft_countwords(const char *s, char c);
